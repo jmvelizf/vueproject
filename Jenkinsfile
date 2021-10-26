@@ -3,6 +3,9 @@ pipeline {
        docker { image 'node:14-alpine' }
     }
     stages {
+        stage('setup') {
+					sh 'npm install -g @vue/cli'
+				}
         stage('build') {
             steps {
                 echo 'building the application'
