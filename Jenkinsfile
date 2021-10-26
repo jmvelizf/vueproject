@@ -6,20 +6,13 @@ pipeline {
         stage('build') {
             steps {
                 echo 'building the application'
-								sh 'node --version'
-								sh 'ls'
 								sh 'npm install && npm run build'        
-            }
-        }
-        stage('test'){
-            steps {
-                echo 'testing the application'
-								sh 'ls'
             }
         }
         stage('deploy') {
             steps {
                 echo 'deploying the application'
+								sh 'docker cp dist static_files:/app/public'
             }
         }
     }
