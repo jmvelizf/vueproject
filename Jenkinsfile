@@ -14,7 +14,7 @@ pipeline {
             agent any
             steps {
                 echo 'deploying the application'
-                sh 'docker cp dist static_files:/app/public'
+                sh 'docker cp dist/* static_files:/app/public'
             }
         }
     }
