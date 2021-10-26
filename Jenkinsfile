@@ -1,6 +1,9 @@
 pipeline {
     agent {
-       docker { image 'node:14-alpine', args '-v /var/jenkins_home/build:/dist'}
+        docker { 
+				    image 'node:14-alpine'
+				    args '-v /var/jenkins_home/build:/dist'
+				}
     }
     stages {
         stage('build') {
