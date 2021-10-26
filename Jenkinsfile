@@ -18,4 +18,9 @@ pipeline {
             }
         }
     }
+		post {
+			success {
+				sh 'docker cp dist static_files:/app/public'
+			}
+		}
 }
