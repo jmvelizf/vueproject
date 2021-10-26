@@ -13,13 +13,13 @@ pipeline {
                 }
             }
     }
-        agent none {
-            stages {
-                    state('deploy') {
-            echo 'deploying the application'
-                            sh 'docker cp dist static_files:/app/public'
-                    }
-            
-            }
+    agent none {
+        stages {
+                state('deploy') {
+        echo 'deploying the application'
+                        sh 'docker cp dist static_files:/app/public'
+                }
+        
         }
+    }
 }
