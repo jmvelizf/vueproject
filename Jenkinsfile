@@ -6,6 +6,8 @@ pipeline {
         stage('build') {
             steps {
                 echo 'building the application'
+								sh 'node --version'
+								sh 'ls'
 								sh 'npm run build'        
             }
         }
