@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    Some change here!
+    I made a new change here!!!!!!!!!! Some change here!
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
