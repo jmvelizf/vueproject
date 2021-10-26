@@ -4,7 +4,9 @@ pipeline {
     }
     stages {
         stage('setup') {
-					sh 'npm install -g @vue/cli'
+						steps {
+								sh 'npm install -g @vue/cli'
+						}
 				}
         stage('build') {
             steps {
